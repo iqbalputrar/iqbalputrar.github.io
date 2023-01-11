@@ -50,7 +50,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-7.02800994183,110.432384915],[-6.54964752983,111.336701736]]);
+        }).fitBounds([[-6.99041155959,110.49112361],[-6.61180305921,111.223900424]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         L.control.locate().addTo(map);
@@ -79,10 +79,6 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">ID</th>\
-                        <td>' + (feature.properties['ID'] !== null ? Autolinker.link(String(feature.properties['ID'])) : '') + '</td>\
-                    </tr>\
                     <tr>\
                         <th scope="row">KEC</th>\
                         <td>' + (feature.properties['KEC'] !== null ? Autolinker.link(String(feature.properties['KEC'])) : '') + '</td>\
@@ -183,7 +179,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['KEC'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['KEC']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Jml_Nakes_0'});
+            layer.bindTooltip((layer.feature.properties['KEC'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'Sans Serif Collection\', sans-serif;">' + layer.feature.properties['KEC']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Jml_Nakes_0'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
